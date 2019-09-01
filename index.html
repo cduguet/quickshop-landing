@@ -858,7 +858,9 @@
                      <div class="title wow fadeInUp" data-wow-duration="1.0s"><span>Get in Touch</span></div>
                      <div class="sub-title wow fadeInUp" data-wow-duration="2.0s">Have more Questions? Just fill in your name and we will get in contact with you in no time.</div>
                   </div>
-                  <form class="form" action="https://docs.google.com/forms/d/e/1FAIpQLSehE_ha972bYCQJzWLm4M1_F__emKN4miyx6WNA7P_9dbv3qA/formResponse">
+                  <script type="text/javascript">var submitted=false;</script>
+                  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {$('#contact-modal').modal('show');}"></iframe>
+                  <form class="form" action="https://docs.google.com/forms/d/e/1FAIpQLSehE_ha972bYCQJzWLm4M1_F__emKN4miyx6WNA7P_9dbv3qA/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
                      <div class="row">
                         <div class="col-lg-6 col-sm-12">
                            <div class="form-group wow fadeInUp" data-wow-duration="1.0s">
@@ -931,6 +933,28 @@
       </footer>
       <!--=================================
          Footer -->
+      <!--=================================
+         Modal -->
+      <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Thank you!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  We will shortly be in contact with you.
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Dismiss</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--=================================
+         Modal -->
       <!-- back-to-top -->
       <div id="back-to-top">
          <a class="top" id="top" href="#top"> <i class="fa fa-angle-double-up"></i>
